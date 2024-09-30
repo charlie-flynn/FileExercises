@@ -95,6 +95,7 @@ namespace FileExercises
             bob.Print();
             fred.Print();
             jane.Print();
+            Console.ReadLine();
         }
     }
 }
