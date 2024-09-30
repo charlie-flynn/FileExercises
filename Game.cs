@@ -11,8 +11,13 @@ namespace FileExercises
     {
         public void Run()
         {
+            SerializeIO serialize = new SerializeIO();
+            serialize.Run();
+
+            /*
             TextIO text = new TextIO();
             text.Run();
+            */
         }
     }
 }

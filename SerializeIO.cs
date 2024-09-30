@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +24,47 @@ namespace FileExercises
         }
         public void Serialize(string path)
         {
+            // write the values of name, email, and id into a file
+            try
+            {
+                // create the folder named contacts if it doesnt exist
+                if (!File.Exists(@"contacts"))
+                {
+                    Directory.CreateDirectory("contacts");
+                }
 
+                using (StreamWriter writer = new StreamWriter(path))
+                {
+                    writer.WriteLine(name);
+                    writer.WriteLine(email);
+                    writer.WriteLine(id);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
         public void DeSerialize(string path)
         {
+            // get the values from the file and put them into the contact
+            // convert the id from a string into an int before putting it back
+            try
+            {
+                using (StreamReader reader = new StreamReader(path))
+                {
+                    string str;
 
+                    name = reader.ReadLine();
+                    email = reader.ReadLine();
+                    int.TryParse(reader.ReadLine(), out int result);
+                    id = result;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
     internal class SerializeIO
