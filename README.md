@@ -1,6 +1,10 @@
 File Exercises for AIE.
 
-Double-click on the FileExercises.EXE file to run.
+Download the program by clicking [here!](https://github.com/charlie-flynn/FileExercises/releases)
+
+Then right-click the .ZIP, and click Extract All.
+
+Afterwards, you're good to run the executable (.exe) file that's in the folder!
 
 This program does the following:
 - Creates a text file with three lines of text
