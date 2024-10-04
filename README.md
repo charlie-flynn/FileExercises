@@ -1,6 +1,6 @@
 File Exercises for AIE.
 
-Download the program by clicking [here!](https://github.com/charlie-flynn/FileExercises/releases)
+Download the program by clicking [here,](https://github.com/charlie-flynn/FileExercises/releases) then clicking on the .zip file at the top of the Assets list to download it!
 
 Then right-click the .ZIP, and click Extract All.
 
