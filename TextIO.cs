@@ -11,9 +11,9 @@ namespace FileExercises
     {
         public void Run()
         {
-            string path = "test.txt";
+            string path = @"test.txt";
 
-            // Write my awesome file
+            // If the file this is about to make doesnt already exist, make a text file and write some text into it
             if (!File.Exists(path))
             {
                 try
@@ -24,7 +24,7 @@ namespace FileExercises
                     writer.WriteLine("Welcome! (awesome)");
                     writer.Close();
 
-                    // dispose of the awesome object
+                    // Dispose of the StreamWriter
                     try
                     {
                         writer.Dispose();
@@ -42,7 +42,7 @@ namespace FileExercises
 
             }
 
-            // Read my awesome file
+            // Read the file and print out every single line in it
             try
             {
                 using (StreamReader reader = new StreamReader(path))

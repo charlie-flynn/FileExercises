@@ -30,7 +30,7 @@ namespace FileExercises
                 // create the folder named contacts if it doesnt exist
                 if (!File.Exists(@"contacts"))
                 {
-                    Directory.CreateDirectory("contacts");
+                    Directory.CreateDirectory(@"contacts");
                 }
 
                 using (StreamWriter writer = new StreamWriter(path))
@@ -47,7 +47,7 @@ namespace FileExercises
         }
         public void DeSerialize(string path)
         {
-            // get the values from the file and put them into the contact
+            // get the values from the file and put them into the contact object
             // convert the id from a string into an int before putting it back
             try
             {
